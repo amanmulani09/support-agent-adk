@@ -45,5 +45,4 @@ root_agent = Agent(
     - If an order cannot be found, explain that clearly.
     """,
     tools=[lookup_order]
-    
 )
