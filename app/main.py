@@ -6,16 +6,6 @@ from google.adk.sessions import InMemorySessionService
 from google.genai import types
 
 from app.agent import root_agent
-
-
-session_service = InMemorySessionService()
-
-runner = Runner(
-    app_name="customer_support_agent",
-    agent=root_agent,
-    session_service=session_service
-)
-
 class SupportRequest(BaseModel):
     message:str
     user_id:str
@@ -33,6 +23,15 @@ async def root():
 @app.post('/health')
 async def health():
     return {"status":"healthy"}
+
+
+session_service = InMemorySessionService()
+
+runner = Runner(
+    app_name="customer_support_agent",
+    agent=root_agent,
+    session_service=session_service
+)
 
 
 @app.post('/support', response_model=SupportResponse)

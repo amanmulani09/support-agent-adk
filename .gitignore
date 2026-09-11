@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# GitHub Actions Google Cloud credentials
+gha-creds-*.json

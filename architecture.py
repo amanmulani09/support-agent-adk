@@ -7,3 +7,9 @@
 # Then Deployment Flow 
 
 ## FastAPI -> ADK -> deps -> Docker Image -> Artificats Registry -> Cloud run 
+
+
+## Docker 
+
+# create docker image 
+
